@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cluster-versions
-  namespace: openshift-gitops-operator
+  namespace: openshift-gitops
 data:
   local: main
 

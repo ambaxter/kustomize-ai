@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: root-applications
   # You'll usually want to add your resources to the argocd namespace.
-  namespace: openshift-gitops-operator
+  namespace: openshift-gitops
   # Add this finalizer ONLY if you want these to cascade delete.
   finalizers:
     # The default behaviour is foreground cascading deletion
@@ -31,7 +31,7 @@ spec:
     # or cluster name
     # name: in-cluster
     # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
-    namespace: openshift-gitops-operator
+    namespace: openshift-gitops
 
   # Sync policy
   syncPolicy:
