@@ -32,7 +32,7 @@ replacements:
     version: v1
     kind: ConfigMap
     name: cluster-versions
-    fieldPath: data.hub
+    fieldPath: data.local
   targets:
   - select:
       group: argoproj.io
