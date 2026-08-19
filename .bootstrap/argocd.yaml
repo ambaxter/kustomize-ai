@@ -1,4 +1,3 @@
----
 apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
@@ -476,20 +475,6 @@ spec:
     env:
     - name: KUSTOMIZE_PLUGIN_HOME
       value: /etc/kustomize/plugin
-    initContainers:
-    - args:
-      - -c
-      - cp /policy-generator/PolicyGenerator-not-fips-compliant /policy-generator-tmp/PolicyGenerator
-      command:
-      - /bin/bash
-      image: registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel9:v2.11
-      name: policy-generator-install
-      volumeMounts:
-      - mountPath: /policy-generator-tmp
-        name: policy-generator
-    volumeMounts:
-    - mountPath: /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator
-      name: policy-generator                
     sidecarContainers:
       - name: setenv-plugin
         command: [/var/run/argocd/argocd-cmp-server]
@@ -509,15 +494,11 @@ spec:
             name: tmp
           - mountPath: /home/argocd/cmp-server/config/plugin.yaml
             subPath: plugin.yaml
-            name: setenv-cmp-plugin
-          - mountPath: /etc/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator
-            name: policy-generator                    
+            name: setenv-cmp-plugin                 
     volumes:
       - configMap:
           name: setenv-cmp-plugin
-        name: setenv-cmp-plugin
-      - emptyDir: {}
-        name: policy-generator        
+        name: setenv-cmp-plugin  
     resources:
       limits:
         cpu: "1"
