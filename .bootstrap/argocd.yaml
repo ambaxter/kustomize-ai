@@ -481,8 +481,8 @@ spec:
         envFrom:
         - configMapRef:
             name: environment-variables
-        image: envsub:latest
-        imagePullPolicy: Always
+        image: image-registry.openshift-image-registry.svc:5000/openshift-gitops/envsub:latest
+        imagePullPolicy: IfNotPresent
         securityContext:
           runAsNonRoot: true
         volumeMounts:
