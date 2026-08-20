@@ -7,40 +7,42 @@ metadata:
   name: default-dsc
 spec:
   components:
-    aipipelines:
-      managementState: Managed
-    dashboard:
-      managementState: Managed
-    feastoperator:
-      managementState: Managed
     kserve:
       managementState: Managed
+      modelsAsService:
+        managementState: Removed
       nim:
         managementState: Managed
-      wva:
-        managementState: Managed
-    kueue:
-      managementState: Managed
-    llamastackoperator:
-      managementState: Managed
-    mlflowoperator:
-      managementState: Managed
+      rawDeploymentServiceConfig: Headless
     modelregistry:
       managementState: Managed
       registriesNamespace: rhoai-model-registries
-    ray:
-      managementState: Managed
-    sparkoperator:
-      managementState: Managed
-    trainer:
-      managementState: Managed
-    trainingoperator:
+    feastoperator:
       managementState: Managed
     trustyai:
-      managementState: Managed
       eval:
         lmeval:
           permitCodeExecution: deny
           permitOnline: deny
+      managementState: Managed
+    aipipelines:
+      argoWorkflowsControllers:
+        managementState: Managed
+      managementState: Managed
+    ray:
+      managementState: Managed
+    kueue:
+      defaultClusterQueueName: default
+      defaultLocalQueueName: default
+      managementState: Removed
     workbenches:
+      managementState: Managed
+      workbenchNamespace: rhods-notebooks
+    mlflowoperator: {}
+    dashboard:
+      managementState: Managed
+    trainer: {}
+    llamastackoperator:
+      managementState: Removed
+    trainingoperator:
       managementState: Managed
