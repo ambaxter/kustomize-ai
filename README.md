@@ -9,8 +9,7 @@ oc apply -f .bootstrap/cluster-rolebinding.yaml
 sleep 60
 oc project openshift-gitops
 oc apply -f .bootstrap/envsubst.yaml
-oc start-build envsub
-sleep 180
+oc start-build envsub -w
 envsubst < .bootstrap/argocd.yaml | oc apply -f -
 sleep 30
 envsubst < .bootstrap/root-application.yaml | oc apply -f -

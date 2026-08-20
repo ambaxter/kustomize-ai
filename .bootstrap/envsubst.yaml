@@ -1,3 +1,14 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: envsub
+  namespace: openshift-gitops
+  labels:
+    build: envsub
+spec:
+  lookupPolicy:
+    local: false
+---
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
