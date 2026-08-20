@@ -18,11 +18,11 @@ spec:
       nim:
         managementState: Managed
       wva:
-        managementState: Removed
+        managementState: Managed
     kueue:
-      managementState: Removed
+      managementState: Managed
     llamastackoperator:
-      managementState: Removed
+      managementState: Managed
     mlflowoperator:
       managementState: Managed
     modelregistry:
@@ -31,11 +31,11 @@ spec:
     ray:
       managementState: Managed
     sparkoperator:
-      managementState: Removed
+      managementState: Managed
     trainer:
       managementState: Managed
     trainingoperator:
-      managementState: Removed
+      managementState: Managed
     trustyai:
       managementState: Managed
       eval:
