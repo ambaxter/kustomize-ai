@@ -8,6 +8,4 @@ spec:
   plugins:
   - monitoring-plugin
   - gitops-plugin
-  - forklift-console-plugin
-  - nmstate-console-plugin
-  - networking-console-plugin
+  - pipelines-console-plugin
