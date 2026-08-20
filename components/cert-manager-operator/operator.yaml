@@ -17,7 +17,6 @@ metadata:
   name: openshift-cert-manager-operator
   namespace: cert-manager-operator
   annotations:
-    argocd.argoproj.io/ignore-healthcheck: "true"
 spec:
   channel: stable-v1
   name: openshift-cert-manager-operator
