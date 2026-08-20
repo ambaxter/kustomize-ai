@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - ../cluster-versions.yaml  
   - ../../groups/all
+  - ../../groups/ai
 
 helmGlobals:
   chartHome: ../../.helm-charts
