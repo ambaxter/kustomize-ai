@@ -33,7 +33,7 @@ metadata:
 spec:
   channel: stable-v1.4
   installPlanApproval: Automatic
-  name: rhods-operator
+  name: kueue-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   startingCSV: 1.4.1
