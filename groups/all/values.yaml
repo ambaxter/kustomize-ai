@@ -24,6 +24,12 @@ applications:
     source:
       path: components/openshift-pipelines-operator
 
+  openshift-pipelines-operator:
+    annotations:
+      argocd.argoproj.io/sync-wave: '5'
+    source:
+      path: components/cert-manager-operator
+
   openshift-keda-operator:
     annotations:
       argocd.argoproj.io/sync-wave: '5'
