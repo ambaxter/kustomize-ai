@@ -15,3 +15,11 @@ projects:
       clusterResourceWhitelist:
       - group: '*'
         kind: '*'
+
+applications:     
+
+  openshift-pipelines:
+    annotations:
+      argocd.argoproj.io/sync-wave: '5'
+    source:
+      path: components/openshift-pipelines

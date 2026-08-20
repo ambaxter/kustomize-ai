@@ -3,7 +3,7 @@ applications:
 # Basic      
 
 
-## Virtualization
+## AI
 
   openshift-ai:
     annotations:
