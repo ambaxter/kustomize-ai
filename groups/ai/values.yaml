@@ -10,3 +10,10 @@ applications:
       argocd.argoproj.io/sync-wave: '5'
     source:
       path: components/openshift-ai-operator
+
+## Data Science Cluster
+  openshift-ai-operator:
+    annotations:
+      argocd.argoproj.io/sync-wave: '10'
+    source:
+      path: components/datasciencecluster-instance
