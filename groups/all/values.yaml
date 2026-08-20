@@ -29,3 +29,9 @@ applications:
       argocd.argoproj.io/sync-wave: '5'
     source:
       path: components/openshift-keda
+
+  gitea-operator:
+    annotations:
+      argocd.argoproj.io/sync-wave: '5'
+    source:
+      path: components/gitea-operator
