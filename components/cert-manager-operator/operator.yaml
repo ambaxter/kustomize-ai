@@ -10,7 +10,6 @@ metadata:
   namespace: cert-manager-operator
 spec:
   targetNamespaces: []
-  spec: {}
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
