@@ -12,7 +12,7 @@ applications:
       path: components/openshift-ai-operator
 
 ## Data Science Cluster
-  openshift-ai-operator:
+  datasciencecluster-instance:
     annotations:
       argocd.argoproj.io/sync-wave: '10'
     source:
