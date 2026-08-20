@@ -5,11 +5,11 @@ applications:
 
 ## AI
 
-  openshift-ai:
+  openshift-ai-operator:
     annotations:
       argocd.argoproj.io/sync-wave: '5'
     source:
-      path: components/openshift-ai
+      path: components/openshift-ai-operator
   
   kueue-operator:
     annotations:
