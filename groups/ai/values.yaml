@@ -23,3 +23,10 @@ applications:
       argocd.argoproj.io/sync-wave: '10'
     source:
       path: components/datasciencecluster-instance
+
+## Configuration
+  openshift-ai-configuration:
+    annotations:
+      argocd.argoproj.io/sync-wave: '15'
+    source:
+      path: components/openshift-ai-configuration
