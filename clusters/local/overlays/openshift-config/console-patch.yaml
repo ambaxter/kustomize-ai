@@ -9,3 +9,4 @@ spec:
   - monitoring-plugin
   - gitops-plugin
   - pipelines-console-plugin
+  - networking-console-plugin
